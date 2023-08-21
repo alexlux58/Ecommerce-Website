@@ -1,54 +1,55 @@
 using System.Data.SqlClient;
-
 using Ecommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class UsersController
+    [Route("api/[controller]")]
+    public class MedicinesController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        public UsersController(IConfiguration configuration)
-        {
+        public MedicinesController(IConfiguration configuration){
             _configuration = configuration;
         }
 
         [HttpPost]
-        [Route("registration")]
-        public Response Register(Users users){
-            Response response = new Response();
+        [Route("AddToCart")]
+        public Response AddToCart(Cart cart){
             DAL dal = new DAL();
             SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
-            response = dal.register(users, connection);
+            Response response = dal.AddToCart(cart, connection);
+
             return response;
         }
 
         [HttpPost]
-        [Route("login")]
-        public Response Login(Users users){
+        [Route("PlaceOrder")]
+        public Response PlaceOrder(Users users){
             DAL dal = new DAL();
             SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
-            Response response = dal.Login(users, connection);
+            Response response = dal.PlaceOrder(users, connection);
+
+            return response;
+        }
+
+        [HttpGet]
+        [Route("OrderList")]
+        public Response OrderList(Users users){
+            DAL dal = new DAL();
+            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
+            Response response = dal.OrderList(users, connection);
+
             return response;
         }
 
         [HttpPost]
-        [Route("viewUser")]
-        public Response ViewUser(Users users){
+        [Route("AddUpdateMedicine")]
+        public Response AddUpdateMedicine(Medicines medicines){
             DAL dal = new DAL();
             SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
-            Response response = dal.ViewUser(users, connection);
-            return response;
-        }
+            Response response = dal.AddUpdateMedicine(medicines, connection);
 
-        [HttpPost]
-        [Route("updateProfile")]
-        public Response UpdateProfile(Users users){
-            DAL dal = new DAL();
-            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
-            Response response = dal.UpdateProfile(users, connection);
             return response;
         }
     }
