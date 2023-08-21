@@ -43,14 +43,6 @@ namespace Ecommerce.Controllers
             return response;
         }
 
-        [HttpPost]
-        [Route("AddUpdateMedicine")]
-        public Response AddUpdateMedicine(Medicines medicines){
-            DAL dal = new DAL();
-            SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("EMedCS").ToString());
-            Response response = dal.AddUpdateMedicine(medicines, connection);
-
-            return response;
-        }
+        
     }
 }

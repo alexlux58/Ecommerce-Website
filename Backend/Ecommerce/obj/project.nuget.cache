@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AM5sWGlbCBKuMezn7VVMb3sty39axeoo5dOygpxom0QTzR0Q7lOnH2F834On7Du6JD046HuF2i3/UPK7Jj1LcA==",
+  "dgSpecHash": "pb07pngNKgXxXGPGhobBRGFhgeX3z11qAGd1bYf+oda1MEbgflfm1CmYXlu50NJ2T+yj1g+rX0ywrtOdHFvOFA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact\\React-NET-Ecommerce\\Backend\\Ecommerce\\Ecommerce.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact\\React-NET-Ecommerce\\Backend\\Ecommerce\\Ecommerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

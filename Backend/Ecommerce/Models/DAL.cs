@@ -248,16 +248,16 @@ namespace Ecommerce.Models
 
                 if (ListUsers.Count > 0){
                     response.StatusCode = 200;
-                    response.StatusMessage = "Order details found";
+                    response.StatusMessage = "User details found";
                     response.ListUsers = ListUsers;
                 } else{
                     response.StatusCode = 100;
-                    response.StatusMessage = "Order details not found";
+                    response.StatusMessage = "User details not found";
                     response.ListUsers = null;
                 }
             } else{
                     response.StatusCode = 100;
-                    response.StatusMessage = "Order details not found";
+                    response.StatusMessage = "User details not found";
                     response.ListUsers = null;
                 }
 
